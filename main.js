@@ -1,3 +1,4 @@
+import createCharacterCard from "./components/card-character";
 import { createElement } from "./lib/elements";
 import "./style.css";
 
@@ -44,7 +45,22 @@ function renderApp() {
     {
       className: "main",
     },
-    [createElement("p", { textContent: "In development..." })]
+    [
+      createCharacterCard({
+        name: "Jerry's Mytholog",
+        lastLocation: "Nuptia4",
+        status: "Dead - Mythological Creature",
+        firstLocation: "Big Trouble in Little Sanchez",
+        img: "https://rickandmortyapi.com/api/character/avatar/178.jpeg",
+      }),
+      createCharacterCard({
+        name: "Kristin Stewart",
+        lastLocation: "Earth (C-500A)",
+        status: "Alive - Human",
+        firstLocation: "Rixty Minutes",
+        img: "https://rickandmortyapi.com/api/character/avatar/195.jpeg",
+      }),
+    ]
   );
 
   const footerElement = createElement(
