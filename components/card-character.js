@@ -7,6 +7,7 @@ export default function createCharacterCard({
   status,
   firstLocation,
   img,
+  statusColor,
 }) {
   const characterCard = createElement(
     "article",
@@ -25,13 +26,22 @@ export default function createCharacterCard({
           className: styles.characterDescription,
         },
         [
+          createElement("div", {
+            className: styles.characterTitle,
+            textContent: name,
+          }),
+
           createElement(
             "div",
             {
-              className: styles.characterTitle,
-              textContent: name,
+              className: styles.statusBar,
             },
             [
+              createElement("div", {
+                className: statusColor,
+                textContent: "",
+              }),
+
               createElement("div", {
                 className: styles.characterSubtitle,
                 textContent: status,

@@ -1,8 +1,8 @@
 .card {
   background: var(--background-color-character);
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  margin: 4em;
+  grid-template-columns: 40% 60%;
+  margin: 1em;
   border-radius: 1em;
   font-family: var(--font-family-text);
   justify-items: start;
@@ -37,6 +37,11 @@
   height: 100%;
   border-radius: 1em 0 0 1em;
   padding-right: 0.4em;
+}
+
+.statusBar {
+  display: flex;
+  align-items: center;
 }
 
 @media only screen and (max-width: 600px) {
