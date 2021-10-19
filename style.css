@@ -1,8 +1,98 @@
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@600&family=Oswald&display=swap");
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+:root {
+  /* FONT */
+  --font-family-heading: "Nunito Sans", sans-serif;
+  --font-family-text: "Oswald", sans-serif;
+
+  /* COLORS */
+  --color-heading: #202329;
+  --color-text: #333;
+  --color-contrast: #fff;
+  --color-hover: #ff9800;
+  --background-color-main: #24282f;
+  --background-color-footer: #202329;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-family-heading);
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family-text);
+}
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 1.2em;
+  margin: 1em 0 1em 0;
+}
+
+header {
+  background-color: var(--color-contrast);
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  margin: 0;
+  background-image: url("https://www.amigosdoforum.com.br/wp-content/uploads/2017/08/rickmorty.jpg");
+  background-size: cover;
+  background-position: center center;
+  visibility: inherit;
+  background-repeat: no-repeat;
+  height: 50vh;
+}
+
+.header h1 {
+  background-color: var(--color-contrast);
+  padding: 0.2em;
+  margin: auto;
+  font-size: 3.75em;
+  font-weight: 900;
+}
+
+.header {
+  display: grid;
+  align-content: center;
+}
+
+main {
+  background-color: var(--background-color-main);
+  margin: 0;
+}
+
+footer {
+  background-color: var(--background-color-footer);
+  margin: 0;
+  text-align: center;
+}
+
+.nav_docs {
+  margin-right: 1.75rem;
+}
+
+.nav_about {
+  margin-right: 1.75rem;
+}
+
+.nav_help {
+  margin-right: 1.75rem;
+  border: 1px solid var(--color-hover);
+  padding: 0.2em;
+  border-radius: 0.4em;
 }
