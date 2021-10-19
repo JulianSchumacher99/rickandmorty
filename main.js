@@ -60,6 +60,20 @@ function renderApp() {
         firstLocation: "Rixty Minutes",
         img: "https://rickandmortyapi.com/api/character/avatar/195.jpeg",
       }),
+      createCharacterCard({
+        name: "Worldender",
+        lastLocation: "Worldender's lair",
+        status: "Dead - Alien",
+        firstLocation: "Vindicators 3: The Return of Worldender",
+        img: "https://rickandmortyapi.com/api/character/avatar/382.jpeg",
+      }),
+      createCharacterCard({
+        name: "Public Opinion Judge",
+        lastLocation: "Earth (Replacement Dimension)",
+        status: "Alive - Human",
+        firstLocation: "Edge of Tomorty: Rick, Die, Rickpeat",
+        img: "https://rickandmortyapi.com/api/character/avatar/514.jpeg",
+      }),
     ]
   );
 
