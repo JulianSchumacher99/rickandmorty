@@ -62,7 +62,7 @@ function renderApp() {
       createCharacterCard({
         name: "Jerry's Mytholog",
         lastLocation: "Nuptia4",
-        status: "Dead-",
+        status: "Dead",
         race: "Mythological Creature",
         firstLocation: "Big Trouble in Little Sanchez",
         img: "https://rickandmortyapi.com/api/character/avatar/178.jpeg",
