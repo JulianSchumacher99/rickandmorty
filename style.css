@@ -58,8 +58,8 @@ body {
   background-color: var(--color-contrast);
   text-align: center;
   margin: 0;
-  background-image: url("/assets/rickandmorty_header.svg");
-  background-size: cover;
+  background-image: url("./assets/rickandmorty_header.svg");
+  background-size: contain;
   background-position: center center;
   visibility: inherit;
   background-repeat: no-repeat;
