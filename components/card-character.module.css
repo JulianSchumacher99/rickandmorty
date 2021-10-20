@@ -9,6 +9,14 @@
   align-items: center;
 }
 
+.card h2 {
+  font-size: 1em;
+}
+
+.card h3 {
+  font-size: 0.8em;
+}
+
 .characterDescription {
   padding: 0.2em;
 }

@@ -12,7 +12,7 @@ function renderApp() {
     },
     [
       createElement("img", {
-        src: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn.domestika.org%2Fc_fill%2Cdpr_1.0%2Ch_1200%2Ct_base_params.format_jpg%2Cw_1200%2Fv1546529981%2Fproject-covers%2F000%2F458%2F388%2F458388-original.jpg%3F1546529981&f=1&nofb=1",
+        src: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.OyQMVVVZSik0GcIw8ADcZAAAAA%26pid%3DApi&f=1",
         className: "nav_img",
       }),
 
@@ -62,7 +62,8 @@ function renderApp() {
       createCharacterCard({
         name: "Jerry's Mytholog",
         lastLocation: "Nuptia4",
-        status: "Dead - Mythological Creature",
+        status: "Dead",
+        race: "Mythological Creature",
         firstLocation: "Big Trouble in Little Sanchez",
         img: "https://rickandmortyapi.com/api/character/avatar/178.jpeg",
         statusColor: "statusDead",
@@ -70,7 +71,8 @@ function renderApp() {
       createCharacterCard({
         name: "Kristin Stewart",
         lastLocation: "Earth (C-500A)",
-        status: "Alive - Human",
+        status: "Alive",
+        race: "Human",
         firstLocation: "Rixty Minutes",
         img: "https://rickandmortyapi.com/api/character/avatar/195.jpeg",
         statusColor: "statusAlive",
@@ -78,7 +80,8 @@ function renderApp() {
       createCharacterCard({
         name: "Worldender",
         lastLocation: "Worldender's lair",
-        status: "Dead - Alien",
+        status: "Dead",
+        race: "Alien",
         firstLocation: "Vindicators 3: The Return of Worldender",
         img: "https://rickandmortyapi.com/api/character/avatar/382.jpeg",
         statusColor: "statusDead",
@@ -86,7 +89,8 @@ function renderApp() {
       createCharacterCard({
         name: "Public Opinion Judge",
         lastLocation: "Earth (Replacement Dimension)",
-        status: "Alive - Human",
+        status: "Alive",
+        race: "Human",
         firstLocation: "Edge of Tomorty: Rick, Die, Rickpeat",
         img: "https://rickandmortyapi.com/api/character/avatar/514.jpeg",
         statusColor: "statusAlive",
@@ -94,7 +98,8 @@ function renderApp() {
       createCharacterCard({
         name: "Alien Mexican Armada",
         lastLocation: "Interdimensional Cable",
-        status: "Unknown - Alien",
+        status: "Unknown",
+        race: "Alien",
         firstLocation: "Rixty Minutes",
         img: "https://rickandmortyapi.com/api/character/avatar/411.jpeg",
         statusColor: "statusUnknown",
@@ -102,10 +107,11 @@ function renderApp() {
       createCharacterCard({
         name: "Train Cop",
         lastLocation: "Story Train",
-        status: "Dead - Human",
+        status: "Dead",
+        race: "Human",
         firstLocation: "Never Ricking Morty",
         img: "https://rickandmortyapi.com/api/character/avatar/632.jpeg",
-        className: "statusDead",
+        statusColor: "statusDead",
       }),
     ]
   );

@@ -8,6 +8,7 @@ export default function createCharacterCard({
   firstLocation,
   img,
   statusColor,
+  race,
 }) {
   const characterCard = createElement(
     "article",
@@ -17,6 +18,7 @@ export default function createCharacterCard({
     [
       createElement("img", {
         src: img,
+        alt: "",
         className: styles.characterImg,
       }),
 
@@ -26,7 +28,7 @@ export default function createCharacterCard({
           className: styles.characterDescription,
         },
         [
-          createElement("div", {
+          createElement("h2", {
             className: styles.characterTitle,
             textContent: name,
           }),
@@ -42,21 +44,21 @@ export default function createCharacterCard({
                 textContent: "",
               }),
 
-              createElement("div", {
+              createElement("h3", {
                 className: styles.characterSubtitle,
-                textContent: status,
+                textContent: `${status} - ${race}`,
               }),
             ]
           ),
 
           createElement(
-            "div",
+            "h2",
             {
               className: styles.characterSeen,
               textContent: "Last known location:",
             },
             [
-              createElement("div", {
+              createElement("h3", {
                 className: styles.characterLocation,
                 textContent: lastLocation,
               }),
@@ -64,13 +66,13 @@ export default function createCharacterCard({
           ),
 
           createElement(
-            "div",
+            "h2",
             {
               className: styles.characterSeen,
               textContent: "First seen in:",
             },
             [
-              createElement("div", {
+              createElement("h3", {
                 className: styles.characterLocation,
                 textContent: firstLocation,
               }),
