@@ -48,7 +48,7 @@ export default function createCharacterCard({
             },
             [
               createElement("div", {
-                className: `status ${statusColor}`,
+                className: `${styles.status} ${statusColor}`,
                 textContent: "",
               }),
 

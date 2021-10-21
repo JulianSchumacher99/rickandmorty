@@ -1,6 +1,7 @@
 import { createElement } from "./lib/elements";
 import "./style.css";
 import createCharacterCard from "./components/card-character";
+import { apiRandomPageCall } from "./lib/apicall.js";
 
 async function renderApp() {
   const appElement = document.querySelector("#app");
@@ -50,13 +51,8 @@ async function renderApp() {
       }),
     ]
   );
-  const randomPage = Math.floor(Math.random() * 34) + 1;
-  const url = "https://rickandmortyapi.com/api/character?page=";
 
-  const response = await fetch(url + randomPage);
-  const body = await response.json();
-  const characters = body.results;
-
+  const characters = await apiRandomPageCall();
   const characterCards = characters.map((character) =>
     createCharacterCard(character)
   );
