@@ -52,28 +52,23 @@
   align-items: center;
 }
 
-.statusDead {
-  background-color: red;
+.status {
   height: 0.5em;
   width: 0.5em;
   border-radius: 50%;
   margin-right: 0.375em;
+}
+
+.statusDead {
+  background-color: red;
 }
 
 .statusAlive {
   background-color: green;
-  height: 0.5em;
-  width: 0.5em;
-  border-radius: 50%;
-  margin-right: 0.375em;
 }
 
 .statusUnknown {
   background-color: grey;
-  height: 0.5em;
-  width: 0.5em;
-  border-radius: 50%;
-  margin-right: 0.375em;
 }
 
 @media only screen and (max-width: 600px) {
