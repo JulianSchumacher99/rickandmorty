@@ -3,13 +3,21 @@ import styles from "./card-character.module.css";
 
 export default function createCharacterCard({
   name,
-  lastLocation,
+  origin,
   status,
-  firstLocation,
-  img,
-  statusColor,
-  race,
+  location,
+  image,
+  species,
 }) {
+  let statusColor = "";
+  if (status === "Alive") {
+    statusColor = styles.statusAlive;
+  } else if (status === "Dead") {
+    statusColor = styles.statusDead;
+  } else {
+    statusColor = styles.statusUnknown;
+  }
+
   const characterCard = createElement(
     "article",
     {
@@ -17,7 +25,7 @@ export default function createCharacterCard({
     },
     [
       createElement("img", {
-        src: img,
+        src: image,
         alt: "",
         className: styles.characterImg,
       }),
@@ -46,7 +54,7 @@ export default function createCharacterCard({
 
               createElement("h3", {
                 className: styles.characterSubtitle,
-                textContent: `${status} - ${race}`,
+                textContent: `${status} - ${species}`,
               }),
             ]
           ),
@@ -60,7 +68,7 @@ export default function createCharacterCard({
             [
               createElement("h3", {
                 className: styles.characterLocation,
-                textContent: lastLocation,
+                textContent: origin.name,
               }),
             ]
           ),
@@ -74,7 +82,7 @@ export default function createCharacterCard({
             [
               createElement("h3", {
                 className: styles.characterLocation,
-                textContent: firstLocation,
+                textContent: location.name,
               }),
             ]
           ),

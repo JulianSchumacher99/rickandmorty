@@ -2,7 +2,7 @@ import { createElement } from "./lib/elements";
 import "./style.css";
 import createCharacterCard from "./components/card-character";
 
-function renderApp() {
+async function renderApp() {
   const appElement = document.querySelector("#app");
 
   const navElement = createElement(
@@ -50,63 +50,12 @@ function renderApp() {
       }),
     ]
   );
+  const randomPage = Math.floor(Math.random() * 34) + 1;
+  const url = "https://rickandmortyapi.com/api/character?page=";
 
-  const characters = [
-    {
-      name: "Jerry's Mytholog",
-      lastLocation: "Nuptia4",
-      status: "Dead",
-      race: "Mythological Creature",
-      firstLocation: "Big Trouble in Little Sanchez",
-      img: "https://rickandmortyapi.com/api/character/avatar/178.jpeg",
-      statusColor: "statusDead",
-    },
-    {
-      name: "Kristin Stewart",
-      lastLocation: "Earth (C-500A)",
-      status: "Alive",
-      race: "Human",
-      firstLocation: "Rixty Minutes",
-      img: "https://rickandmortyapi.com/api/character/avatar/195.jpeg",
-      statusColor: "statusAlive",
-    },
-    {
-      name: "Worldender",
-      lastLocation: "Worldender's lair",
-      status: "Dead",
-      race: "Alien",
-      firstLocation: "Vindicators 3: The Return of Worldender",
-      img: "https://rickandmortyapi.com/api/character/avatar/382.jpeg",
-      statusColor: "statusDead",
-    },
-    {
-      name: "Public Opinion Judge",
-      lastLocation: "Earth (Replacement Dimension)",
-      status: "Alive",
-      race: "Human",
-      firstLocation: "Edge of Tomorty: Rick, Die, Rickpeat",
-      img: "https://rickandmortyapi.com/api/character/avatar/514.jpeg",
-      statusColor: "statusAlive",
-    },
-    {
-      name: "Alien Mexican Armada",
-      lastLocation: "Interdimensional Cable",
-      status: "Unknown",
-      race: "Alien",
-      firstLocation: "Rixty Minutes",
-      img: "https://rickandmortyapi.com/api/character/avatar/411.jpeg",
-      statusColor: "statusUnknown",
-    },
-    {
-      name: "Train Cop",
-      lastLocation: "Story Train",
-      status: "Dead",
-      race: "Human",
-      firstLocation: "Never Ricking Morty",
-      img: "https://rickandmortyapi.com/api/character/avatar/632.jpeg",
-      statusColor: "statusDead",
-    },
-  ];
+  const response = await fetch(url + randomPage);
+  const body = await response.json();
+  const characters = body.results;
 
   const characterCards = characters.map((character) =>
     createCharacterCard(character)
